@@ -17,5 +17,8 @@ namespace EntityLayer.Concrete
         public string? BlogThumbnailImage { get; set; }
         public DateTime? BlogDate { get; set; }
         public bool? BlogStatus { get; set; }
+        public int CategoryID { get; set; }
+        public Category Category { get; set; }
+        public List<Comment> Comments { get; set; }
     }
 }
