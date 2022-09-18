@@ -11,7 +11,7 @@ namespace DataAccessLayer.Abstract
     {
         List<Blog> ListBlog();
         void AddBlog(Blog blog);
-        void RemoBlog(Blog blog);
+        void RemoveBlog(Blog blog);
         void UpdateBlog(Blog blog);
         Blog GetBlog(int id);
     }
