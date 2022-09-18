@@ -20,7 +20,7 @@ namespace DataAccessLayer.Repositories
             throw new NotImplementedException();
         }
 
-        public List<Comment> ListAll()
+        public List<Comment> List()
         {
             throw new NotImplementedException();
         }

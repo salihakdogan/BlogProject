@@ -22,7 +22,7 @@ namespace DataAccessLayer.Repositories
             c.SaveChanges();
         }
 
-        public List<T> ListAll()
+        public List<T> List()
         {
             return c.Set<T>().ToList();
         }
