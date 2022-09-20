@@ -9,7 +9,7 @@ namespace BlogProject.Controllers
         BlogManager bm = new BlogManager(new EfBlogRepository());
         public IActionResult Index()
         {
-            var values = bm.List();
+            var values = bm.GetBlogListWithCategory();
             return View(values);
         }
     }
