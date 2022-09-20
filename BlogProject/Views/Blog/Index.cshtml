@@ -17,14 +17,14 @@
 					@foreach (var item in Model)
 					{
 						<div class="col-lg-4 card">
-							<a href="single.html">
+							<a href="/Blog/BlogDetails/@item.BlogID">
 								<img src="@item.BlogThumbnailImage" class="card-img-top img-fluid" alt="">
 							</a>
 							<div class="card-body">
 								<ul class="blog-icons my-4">
 									<li>
 										<a href="#">
-											<i class="far fa-calendar-alt"></i> @item.BlogDate
+											<i class="far fa-calendar-alt"></i> @(((DateTime)item.BlogDate).ToString("dd MMM yyyy"))
 										</a>
 									</li>
 									<li class="mx-2">
@@ -40,10 +40,10 @@
 
 								</ul>
 								<h5 class="card-title">
-									<a href="single.html">@item.BlogTitle.Substring(0,40)...</a>
+									<a href="/Blog/BlogDetails/@item.BlogID">@item.BlogTitle.Substring(0,item.BlogTitle.Substring(0,20).LastIndexOf(" "))...</a>
 								</h5>
-								<p class="card-text mb-3">@item.BlogContent </p>
-								<a href="single.html" class="btn btn-primary read-m">Read More</a>
+								<p class="card-text mb-3">@item.BlogContent.Substring(0,item.BlogContent.Substring(0,100).LastIndexOf(" "))...</p>
+								<a href="/Blog/BlogDetails/@item.BlogID" class="btn btn-primary read-m">Read More</a>
 							</div>
 						</div>
 					}
