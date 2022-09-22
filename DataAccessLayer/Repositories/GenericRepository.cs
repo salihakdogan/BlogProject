@@ -3,6 +3,7 @@ using DataAccessLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -25,6 +26,11 @@ namespace DataAccessLayer.Repositories
         public List<T> List()
         {
             return c.Set<T>().ToList();
+        }
+
+        public List<T> GetById(Expression<Func<T, bool>> prm)
+        {
+            return c.Set<T>().Where(prm).ToList();
         }
 
         public void Remove(T t)

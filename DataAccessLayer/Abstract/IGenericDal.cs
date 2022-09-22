@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,5 +14,6 @@ namespace DataAccessLayer.Abstract
         void Update(T t);
         List<T> List();
         T GetT(int id);
+        List<T> GetById(Expression<Func<T, bool>> prm);
     }
 }
