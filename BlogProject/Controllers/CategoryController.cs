@@ -9,7 +9,7 @@ namespace BlogProject.Controllers
         CategoryManager cm = new CategoryManager(new EfCategoryRepository());
         public IActionResult Index()
         {
-            var values = cm.List();
+            var values = cm.TList();
             return View(values);
         }
     }
