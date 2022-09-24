@@ -10,6 +10,7 @@ namespace BlogProject.ViewComponents.Comment
         public IViewComponentResult Invoke(int id)
         {
             var values = cm.GetCommentById(id);
+            ViewBag.commentcount = cm.GetCommentById(id).Count();
             return View(values);
         }
     }
