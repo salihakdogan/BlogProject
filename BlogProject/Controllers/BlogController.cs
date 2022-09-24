@@ -15,6 +15,7 @@ namespace BlogProject.Controllers
 
         public IActionResult BlogDetails(int id)
         {
+            ViewBag.blogid = id;
             var values = bm.GetBlogById(id);
             return View(values);
         }
