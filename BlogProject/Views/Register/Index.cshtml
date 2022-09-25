@@ -19,12 +19,12 @@
                             <label for="validationCustom01">First name</label>
 
                             @Html.TextBoxFor(x=>x.WriterName, new { @class="form-control" })
-                            @Html.ValidationMessageFor(x=>x.WriterName)
+                            @Html.ValidationMessageFor(x=>x.WriterName,"", new { @style="color:#FF8282;" })
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="validationCustom02">Last name</label>
                             @Html.TextBoxFor(x=>x.WriterLastname, new { @class="form-control" })
-                            @Html.ValidationMessageFor(x=>x.WriterLastname)                          
+                            @Html.ValidationMessageFor(x=>x.WriterLastname,"", new { @style="color:#FF8282;" })
                         </div>
 
                     </div>
@@ -32,7 +32,7 @@
                         <div class="col-md-6 mb-3">
                             <label for="validationCustom01">Mail adress</label>
                             @Html.TextBoxFor(x=>x.WriterMail, new { @class="form-control" })
-                            @Html.ValidationMessageFor(x=>x.WriterMail)                        
+                            @Html.ValidationMessageFor(x=>x.WriterMail,"", new { @style="color:#FF8282;" })
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="validationCustom01">Writer Image</label>
@@ -44,12 +44,12 @@
                         <div class="form-group col-md-6">
                             <label for="exampleInputPassword1 mb-2">Password</label>
                             @Html.TextBoxFor(x=>x.WriterPassword, new { @class="form-control" })
-                            @Html.ValidationMessageFor(x=>x.WriterPassword)
+                            @Html.ValidationMessageFor(x=>x.WriterPassword,"", new { @style="color:#FF8282;" })
                         </div>
                         <div class="form-group col-md-6">
                             <label for="exampleInputPassword2 mb-2">Confirm Password</label>
                             @Html.TextBoxFor(x=>x.WriterPassword, new { @class="form-control" })
-                            @Html.ValidationMessageFor(x=>x.WriterPassword)                 
+                            @Html.ValidationMessageFor(x=>x.WriterPassword,"", new { @class="text-danger" })
                         </div>
 
                     </div>
